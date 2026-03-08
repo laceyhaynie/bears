@@ -6,7 +6,7 @@ Bear Lake Emergency Amateur Radio Service (BEARS) ham radio club website, migrat
 
 This is a complete rebuild of the BEARS website, preserving all functionality from the legacy PHP site while implementing modern security practices, improved maintainability, and a responsive design.
 
-### Why This Migration?
+### Why Do This Migration?
 
 - **Security**: Eliminates SQL injection, XSS vulnerabilities, and plaintext passwords
 - **Maintainability**: Modern architecture with separation of concerns
