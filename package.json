@@ -1,0 +1,52 @@
+{
+  "name": "bears-website",
+  "version": "1.0.0",
+  "description": "BEARS Ham Radio Club Website - Modern React + Node.js Stack",
+  "private": true,
+  "workspaces": [
+    "node",
+    "react",
+    "shared"
+  ],
+  "scripts": {
+    "install-all": "npm install && npm install --workspace=node && npm install --workspace=react && npm install --workspace=shared",
+    "dev:node": "npm run dev --workspace=node",
+    "dev:react": "npm run dev --workspace=react",
+    "dev": "concurrently \"npm run dev:node\" \"npm run dev:react\"",
+    "test": "npm test --workspaces",
+    "build": "npm run build --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "ham-radio",
+    "bears",
+    "react",
+    "nodejs",
+    "express"
+  ],
+  "author": "BEARS Club",
+  "license": "MIT",
+  "claude": {
+    "skills": {
+      "node": [
+        "database-migration",
+        "api-endpoint-builder",
+        "test-generator"
+      ],
+      "react": [
+        "component-generator",
+        "form-builder",
+        "test-generator"
+      ],
+      "shared": [
+        "database-migration",
+        "component-generator",
+        "api-endpoint-builder",
+        "form-builder",
+        "test-generator"
+      ]
+    }
+  }
+}

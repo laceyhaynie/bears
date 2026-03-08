@@ -1,0 +1,135 @@
+/**
+ * Main SCSS Entry Point
+ *
+ * This file imports all SCSS modules in the correct order.
+ * Import this file in your main.jsx or App.jsx to apply all styles.
+ */
+
+/* 1. Reset and base styles */
+@import './reset';
+@import './variables';
+@import './mixins';
+@import './typography';
+
+/* 2. Component styles */
+@import './components/button';
+@import './components/card';
+@import './components/form';
+
+/* 3. Global layout styles */
+body {
+  background-color: $color-secondary;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Legacy compatibility - main content container */
+.main-container {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: $color-white;
+  border: $border-width-thin solid $color-border;
+  min-height: 100vh;
+}
+
+/* Content area with tan background (legacy style) */
+.content-area {
+  background-color: $color-accent;
+  padding: $spacing-xl;
+  min-height: 400px;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-md;
+  }
+}
+
+/* Center content with max width */
+.container {
+  @include container;
+}
+
+/* Loading spinner */
+.loading {
+  @include flex-center;
+  min-height: 200px;
+  color: $color-text-muted;
+}
+
+.spinner {
+  border: 3px solid $color-gray-300;
+  border-top-color: $color-primary;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message */
+.error-message {
+  padding: $spacing-md;
+  background-color: lighten($color-error, 40%);
+  border-left: 4px solid $color-error;
+  color: darken($color-error, 10%);
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-lg;
+}
+
+/* Success message */
+.success-message {
+  padding: $spacing-md;
+  background-color: lighten($color-success, 50%);
+  border-left: 4px solid $color-success;
+  color: darken($color-success, 10%);
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-lg;
+}
+
+/* Info message */
+.info-message {
+  padding: $spacing-md;
+  background-color: lighten($color-info, 40%);
+  border-left: 4px solid $color-info;
+  color: darken($color-info, 10%);
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-lg;
+}
+
+/* Warning message */
+.warning-message {
+  padding: $spacing-md;
+  background-color: lighten($color-warning, 40%);
+  border-left: 4px solid $color-warning;
+  color: darken($color-warning, 20%);
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-lg;
+}
+
+/* Utility classes */
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: $spacing-sm; }
+.mt-2 { margin-top: $spacing-md; }
+.mt-3 { margin-top: $spacing-lg; }
+.mt-4 { margin-top: $spacing-xl; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: $spacing-sm; }
+.mb-2 { margin-bottom: $spacing-md; }
+.mb-3 { margin-bottom: $spacing-lg; }
+.mb-4 { margin-bottom: $spacing-xl; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: $spacing-sm; }
+.p-2 { padding: $spacing-md; }
+.p-3 { padding: $spacing-lg; }
+.p-4 { padding: $spacing-xl; }

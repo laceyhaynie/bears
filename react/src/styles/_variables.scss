@@ -1,0 +1,181 @@
+/**
+ * SCSS Variables - Design System
+ *
+ * This file defines all design tokens (colors, typography, spacing, etc.)
+ * used throughout the BEARS website. These values preserve the visual
+ * identity from the legacy PHP site while providing a modern foundation.
+ */
+
+/**
+ * COLOR PALETTE
+ * Preserved from legacy site for brand consistency
+ */
+
+// Primary colors (greens)
+$color-primary: #2c411d;          // Dark green (header, navigation)
+$color-primary-light: #3a5527;    // Lighter green (hover states)
+$color-primary-dark: #1f2e14;     // Darker green (active states)
+
+// Secondary colors (blues and grays)
+$color-secondary: #6b98b7;        // Blue-gray (page background)
+$color-secondary-light: #8ab0ca;  // Lighter blue-gray
+$color-secondary-dark: #547a94;   // Darker blue-gray
+
+// Accent colors
+$color-accent: #dcdca2;           // Tan/beige (content background)
+$color-accent-light: #e8e8c0;     // Lighter tan
+$color-accent-dark: #c8c88a;      // Darker tan
+
+// Hover color
+$color-hover: #8a8a65;            // Olive (link hover)
+
+// Border colors
+$color-border: #cecfcd;           // Light gray (borders)
+$color-border-dark: #a0a09f;      // Darker border
+
+// Semantic colors
+$color-success: #2d7a2d;          // Green for success messages
+$color-warning: #d68f00;          // Orange for warnings
+$color-error: #c53030;            // Red for errors
+$color-info: #2b6cb0;             // Blue for info messages
+
+// Neutral colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray-100: #f7fafc;
+$color-gray-200: #edf2f7;
+$color-gray-300: #e2e8f0;
+$color-gray-400: #cbd5e0;
+$color-gray-500: #a0aec0;
+$color-gray-600: #718096;
+$color-gray-700: #4a5568;
+$color-gray-800: #2d3748;
+$color-gray-900: #1a202c;
+
+// Text colors
+$color-text-primary: #1a202c;     // Main text color
+$color-text-secondary: #4a5568;   // Secondary text
+$color-text-muted: #718096;       // Muted text
+$color-text-inverse: #ffffff;     // White text for dark backgrounds
+
+/**
+ * TYPOGRAPHY
+ */
+
+// Font families
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-heading: $font-family-base;
+$font-family-monospace: "Courier New", Courier, monospace;
+
+// Font sizes
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 3rem;      // 48px
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+/**
+ * SPACING
+ * Based on 8px grid system
+ */
+
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+$spacing-4xl: 6rem;     // 96px
+
+/**
+ * BREAKPOINTS
+ * Mobile-first responsive design
+ */
+
+$breakpoint-sm: 640px;   // Small devices (phones)
+$breakpoint-md: 768px;   // Medium devices (tablets)
+$breakpoint-lg: 1024px;  // Large devices (desktops)
+$breakpoint-xl: 1280px;  // Extra large devices
+$breakpoint-2xl: 1536px; // 2X large devices
+
+/**
+ * BORDERS
+ */
+
+$border-width-thin: 1px;
+$border-width-medium: 2px;
+$border-width-thick: 4px;
+
+$border-radius-sm: 0.25rem;   // 4px
+$border-radius-md: 0.5rem;    // 8px
+$border-radius-lg: 0.75rem;   // 12px
+$border-radius-xl: 1rem;      // 16px
+$border-radius-full: 9999px;  // Fully rounded
+
+/**
+ * SHADOWS
+ */
+
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+/**
+ * TRANSITIONS
+ */
+
+$transition-fast: 150ms ease;
+$transition-normal: 250ms ease;
+$transition-slow: 350ms ease;
+
+/**
+ * Z-INDEX LAYERS
+ * Keep z-index values organized and predictable
+ */
+
+$z-index-base: 0;
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+/**
+ * LAYOUT
+ */
+
+$container-max-width: 1200px;
+$header-height: 108px;  // From legacy site
+$nav-height: 40px;      // Approximate from legacy
+
+/**
+ * FORM ELEMENTS
+ */
+
+$input-height: 2.5rem;          // 40px
+$input-padding-x: 0.75rem;      // 12px
+$input-padding-y: 0.5rem;       // 8px
+$input-border-color: $color-gray-400;
+$input-border-radius: $border-radius-md;
+$input-focus-border-color: $color-primary;
+$input-focus-shadow: 0 0 0 3px rgba($color-primary, 0.1);

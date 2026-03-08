@@ -1,0 +1,65 @@
+/**
+ * Card Component Styles
+ */
+
+@import '../variables';
+@import '../mixins';
+
+.card {
+  @include card;
+
+  /* Card header */
+  &__header {
+    padding-bottom: $spacing-md;
+    border-bottom: $border-width-thin solid $color-border;
+    margin-bottom: $spacing-md;
+
+    h2,
+    h3,
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Card body */
+  &__body {
+    flex: 1;
+  }
+
+  /* Card footer */
+  &__footer {
+    padding-top: $spacing-md;
+    border-top: $border-width-thin solid $color-border;
+    margin-top: $spacing-md;
+  }
+
+  /* Interactive card variant */
+  &--interactive {
+    @include card-interactive;
+  }
+
+  /* Accent background variant */
+  &--accent {
+    background-color: $color-accent;
+  }
+
+  /* No padding variant */
+  &--no-padding {
+    padding: 0;
+
+    .card__header,
+    .card__body,
+    .card__footer {
+      padding-left: $spacing-lg;
+      padding-right: $spacing-lg;
+    }
+
+    .card__header {
+      padding-top: $spacing-lg;
+    }
+
+    .card__footer {
+      padding-bottom: $spacing-lg;
+    }
+  }
+}
